@@ -3,6 +3,12 @@ import React from 'react';
 import { Container, Navigation, DropboxIcon, Form } from './styles';
 
 const FormMenu: React.FC = () => {
+  function closeSideMenu() {
+    if (window.toggleActiveSideMenu) {
+      window.toggleActiveSideMenu();
+    }
+  }
+
   return (
     <Container>
       <Navigation>
@@ -10,7 +16,9 @@ const FormMenu: React.FC = () => {
           <DropboxIcon />
           <span>Dropbox</span>
         </h1>
-        <button className="action--close">✕</button>
+        <button className="action--close" onClick={closeSideMenu}>
+          ✕
+        </button>
       </Navigation>
 
       <Form>

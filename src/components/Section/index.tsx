@@ -21,6 +21,12 @@ const Section: React.FC<SectionProps> = ({
   description,
   action,
 }) => {
+  function openSideMenu() {
+    if (window.toggleActiveSideMenu) {
+      window.toggleActiveSideMenu();
+    }
+  }
+
   return (
     <Container className={variant}>
       <HeaderWrapper>
@@ -30,7 +36,7 @@ const Section: React.FC<SectionProps> = ({
             <span>Dropbox</span>
           </h1>
 
-          <button>{action}</button>
+          <button onClick={openSideMenu}>{action}</button>
         </Header>
       </HeaderWrapper>
       <Content>
