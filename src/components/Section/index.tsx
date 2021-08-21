@@ -12,9 +12,15 @@ export type SectionProps = {
   variant: 'blue' | 'beige' | 'white' | 'black';
   title: string;
   description: string;
+  action: string;
 };
 
-const Section: React.FC<SectionProps> = ({ variant, title, description }) => {
+const Section: React.FC<SectionProps> = ({
+  variant,
+  title,
+  description,
+  action,
+}) => {
   return (
     <Container className={variant}>
       <HeaderWrapper>
@@ -24,7 +30,7 @@ const Section: React.FC<SectionProps> = ({ variant, title, description }) => {
             <span>Dropbox</span>
           </h1>
 
-          <button>Interagir</button>
+          <button>{action}</button>
         </Header>
       </HeaderWrapper>
       <Content>

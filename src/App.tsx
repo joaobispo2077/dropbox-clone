@@ -4,16 +4,11 @@ import data from './data';
 
 function App() {
   return (
-    <>
-      {data.map((item, index) => (
-        <Section key={index} {...item} />
+    <main>
+      {data.map((sectionData, index) => (
+        <Section key={index} {...sectionData} />
       ))}
-    </>
-    // <Section
-    //   variant={data[0].variant}
-    //   title={data[0].title}
-    //   description={data[0].description}
-    // />
+    </main>
   );
 }
 
