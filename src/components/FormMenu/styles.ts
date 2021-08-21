@@ -45,6 +45,10 @@ export const Navigation = styled.nav`
 
     cursor: pointer;
   }
+
+  @media (min-width: 1024px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const DropboxIcon = styled(FaDropbox)`
