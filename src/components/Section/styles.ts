@@ -41,8 +41,27 @@ export const Container = styled.section`
       --heading-font-size: 71px;
     }
   }
+
+  background-color: var(--container-background);
 `;
 
 export const Content = styled.div`
   z-index: 2;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  > h2 {
+    font-size: var(--heading-font-size);
+    color: var(--logo-color);
+  }
+
+  > p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+    max-width: var(--content-width);
+  }
+
+  padding: var(--padding-top) 32px var(--padding-bottom);
 `;
