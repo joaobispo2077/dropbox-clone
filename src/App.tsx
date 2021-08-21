@@ -1,4 +1,5 @@
 import React from 'react';
+import FormMenu from './components/FormMenu';
 import Section from './components/Section';
 import SideMenu from './components/SideMenu';
 import data from './data';
@@ -10,7 +11,9 @@ function App() {
         <Section key={index} {...sectionData} />
       ))}
 
-      <SideMenu />
+      <SideMenu>
+        <FormMenu />
+      </SideMenu>
     </main>
   );
 }
