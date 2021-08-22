@@ -53,6 +53,11 @@ export const Content = styled.div`
   max-width: 1440px;
   margin: 0 auto;
 
+  > h2,
+  > p {
+    max-width: var(--content-width);
+  }
+
   > h2 {
     font-size: var(--heading-font-size);
     color: var(--logo-color);
@@ -62,7 +67,6 @@ export const Content = styled.div`
     margin-top: 20px;
     font-size: 16px;
     color: var(--text-color);
-    max-width: var(--content-width);
   }
 
   padding: var(--padding-top) 32px var(--padding-bottom);
